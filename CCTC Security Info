@@ -34,4 +34,9 @@
     XTRA1-020-M
 
 
-ssh -MS /tmp/jump student@10.50.177.143
+# Connect to jump box
+    -ssh -MS /tmp/jump student@10.50.177.143
+
+
+
+for i in {97..126}; do (ping -c i 192.168.28.$i | grep "bytes from" &); done
