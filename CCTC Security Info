@@ -88,3 +88,11 @@
 
 # Authenticate to 192.168.28.100
     - ssh -MS /tmp/t1 username@127.0.0.1 -p 1112
+
+
+# Ping sweep new network id
+    - ping sweep 192.168.150.224
+
+# Set up dyna,ic port forwarding
+    - ssh -S /tmp/jump jump -O cancel -D 9050
+    - ssh -S /tmp/t1 t1 -O forward =D 9050
