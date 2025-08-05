@@ -1,23 +1,23 @@
 
 # Linux Jump Box IP
-  - 10.50.177.143
+    - 10.50.177.143  
 
 # CTFd Server
-  10.50.134.138:8000
+    10.50.134.138:8000
 
 
 
 # Demo Range
-  ssh demo1@10.50.12.178 -L 1111:10.208.50.61:80
-  password
+    ssh demo1@10.50.12.178 -L 1111:10.208.50.61:80
+    password
 
 # Firefox
-  127.0.0.1:1111/classinfo.html
+    127.0.0.1:1111/classinfo.html
 
 # Username
-  FFLL-020-M
-  John Basilone
-  JOBA
-
-  XTRA1-020-M
+    FFLL-020-M
+    John Basilone
+    JOBA
+  
+    XTRA1-020-M
 
