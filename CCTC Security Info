@@ -52,4 +52,31 @@
     - ssh -S /tmp/jump jump -O forward -D 9050
 
 # Scan Found targets
-    - proxychains nmap 192.168.28.100,105,111
+    - proxychains nmap 192.Nmap scan report for 192.168.28.100
+
+        Host is up (0.0043s latency).
+        Not shown: 998 closed ports
+        PORT     STATE SERVICE
+        80/tcp   open  http    ## HTTP
+        2222/tcp open  EtherNetIP-1    ## SSH
+        
+        Nmap scan report for 192.168.28.105
+        Host is up (0.0034s latency).
+        Not shown: 997 closed ports
+        PORT     STATE SERVICE
+        21/tcp   open  ftp
+        23/tcp   open  telnet
+        2222/tcp open  EtherNetIP-1    ## SSh
+        
+        Nmap scan report for 192.168.28.111
+        Host is up (0.0035s latency).
+        Not shown: 997 closed ports
+        PORT     STATE SERVICE
+        80/tcp   open  http    ## HTTP
+        2222/tcp open  EtherNetIP-1    ## SSH    
+        8080/tcp open  http-proxy    ## HTTP
+        168.28.100,105,111
+        
+
+# Port forward to found ports
+        
