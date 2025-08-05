@@ -2,6 +2,17 @@
 # Linux Jump Box IP
     - 10.50.177.143  
 
+
+# Stack #
+    13
+# Username
+    TYSW-020-M
+# Jump
+    10.50.13.59
+# Password
+    tBbAIAgjBoTQ
+
+
 # CTFd Server
     10.50.134.138:8000
 
