@@ -21,3 +21,5 @@
   
     XTRA1-020-M
 
+
+ssh -MS /tmp/jump student@10.50.177.143
