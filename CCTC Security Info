@@ -41,6 +41,13 @@
 # Ping Sweep
     - for i in {97..126}; do (ping -c 1 192.168.28.$i | grep "bytes from" &); done
 
+# Found Addresses
+    64 bytes from 192.168.28.97
+    64 bytes from 192.168.28.100
+    64 bytes from 192.168.28.105
+    64 bytes from 192.168.28.111
+    64 bytes from 192.168.28.120
+
 # Dynamic Port Forwarding
     - ssh -S /tmp/jump jump -O forward -D 9050
 
