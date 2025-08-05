@@ -1,1 +1,3 @@
 nmap --script=http-enum IP
+
+ls -l /usr/share/nmap/scripts/ | grep http,smb
