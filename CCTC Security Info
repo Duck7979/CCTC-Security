@@ -3,14 +3,15 @@
     - 10.50.177.143  
 
 
-# Stack #
-    13
-# Username
-    TYSW-020-M
-# Jump Box
-    10.50.13.59
-# Password
-    tBbAIAgjBoTQ
+# Jump Box Information
+    # Stack #
+        13
+    # Username
+        TYSW-020-M
+    # Jump Box
+        10.50.13.59
+    # Password
+        tBbAIAgjBoTQ
 
 
 # CTFd Server
