@@ -1,6 +1,11 @@
 
-Jump Box IP
+# Linux Jump Box IP
   - 10.50.177.143
+
+# CTFd Server
+  10.50.134.138:8000
+
+
 
 # Demo Range
   ssh demo1@10.50.12.178 -L 1111:10.208.50.61:80
@@ -16,5 +21,3 @@ Jump Box IP
 
   XTRA1-020-M
 
-# CTFd Server
-  10.50.134.138:8000
