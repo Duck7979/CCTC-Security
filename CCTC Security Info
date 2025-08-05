@@ -34,6 +34,12 @@
     XTRA1-020-M
 
 
+
+
+
+
+
+
 # Connect to jump box
     - ssh -MS /tmp/jump student@10.50.177.143
 
