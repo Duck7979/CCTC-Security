@@ -96,3 +96,15 @@
 # Set up dyna,ic port forwarding
     - ssh -S /tmp/jump jump -O cancel -D 9050
     - ssh -S /tmp/t1 t1 -O forward =D 9050
+
+# Scan new IP
+    - proxychains nmap 192.168.150.224
+
+# Port forward to new webserver
+    - ssh -S /tmp/t1 t1 -O forward -L 3111:192.168.150.224:80 -L 3112:192.168.150.224:22
+
+# Firefox
+    - 127.0.0.1:3111
+
+    - student password
+    - ssh -MS /tmp/t2 student@127.0.0.1 -p 3112
