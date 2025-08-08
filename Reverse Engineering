@@ -1,3 +1,32 @@
 This progam cannot be run in DOS mode | means exe
 MZ | windows
 PLS | linux
+
+
+
+
+strings.exe -a -nobanner .\demo1_new.exe | findstr /i succ
+strings.exe -a -n 5 -nobanner .\demo1_new.exe | select -first 10
+strings.exe -a -nobanner .\demo1_new.exe | select -first 10
+
+## BEhavioral Analysis
+run program as its make inteded
+
+## Dynamic Analysis
+Run Progam how we want to (fuzzing, breaking, etc.)
+
+## Disassembly
+Open Ghidra > File > New Project > non-shared > complete
+File > Import File > Navigate/Select .exe 
+Search > ...for strings > succ
+
+
+## Patching 
+Work from end, going backwards
+Look for Success or other message
+Click on condition of statement you need for success to run
+
+Look at the assembly > Right clikc > patch instruction
+Set CMP to the same "EAX,EAX"
+
+File > Export program > change format to PE > change name and location
