@@ -17,6 +17,13 @@
 # CTFd Server
     10.50.134.138:8000
 
+# jump to linux box
+    - ssh -MS /tmp/jump student.50.177.143
+# Linux box to another box
+    - ssh -S /tmp/jump jump -O forward -L 3232:192.168.28.111:80
+
+
+
 
 
 # Demo Range
