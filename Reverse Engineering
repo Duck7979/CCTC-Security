@@ -18,6 +18,10 @@ run program as its make inteded
 ## Dynamic Analysis
 Run Progam how we want to (fuzzing, breaking, etc.)
 
+./func $(echo "12345678")   # cmd substitution as parameter  (./func is the name of the executible)
+./func <<<$(echo "12345678")  # simulates user input
+
+
 ## Disassembly
 Open Ghidra > File > New Project > non-shared > complete
 File > Import File > Navigate/Select .exe 
