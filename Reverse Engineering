@@ -21,6 +21,9 @@ Run Progam how we want to (fuzzing, breaking, etc.)
 ./func $(echo "12345678")   # cmd substitution as parameter  (./func is the name of the executible)
 ./func <<<$(echo "12345678")  # simulates user input
 
+gdb ./func
+  - cmds for gdp
+    - shell, exit, quit
 
 ## Disassembly
 Open Ghidra > File > New Project > non-shared > complete
