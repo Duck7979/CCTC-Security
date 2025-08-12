@@ -23,18 +23,30 @@
   
   gdb ./func
     - cmds for gdp
-      - shell, exit
-      - quit
-      - run    # runs function
-      - info function
-      - disass main or pdisass main
-      - disass or pdisass questionable functions
-      # red finctions might be vulnerable
+    - shell, exit
+    - quit
+    - run    # runs function
+    - info function
+    - disass main or pdisass main
+    - disass or pdisass questionable functions
+    # red finctions might be vulnerable
 
-      # Create script
-      - run <<<$(python linbuf.py)
-      # go to wiremask to pinpoint EIP useing the tool buffer overflow pattern
-      # copy paste calue in EIP back into wiremask
+    # Create script
+    - run <<<$(python linbuf.py)
+    # go to wiremask to pinpoint EIP useing the tool buffer overflow pattern
+    # copy paste value in EIP back into wiremask
+    # change offset and make an eip variable 
+    
+    - shell -> env - gdp ./func   
+    - unset env LINES
+    - unset env COLUMNS
+    - show env
+    - run -> ctrl+c
+    - info proc map
+    # first address after [heap] and last address [stack]
+    # 0xf7de1000 (first of [heap]) and 0xffffe000 (last of [stack])
+    - find /b [first addr heap], [last addr stack], 0xff, 0xe4
+    
 
 ## Disassembly
   Open Ghidra > File > New Project > non-shared > complete
