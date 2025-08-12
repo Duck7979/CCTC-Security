@@ -1,4 +1,5 @@
 ## Static Analysis
+  - strings /path/filename
 This progam cannot be run in DOS mode | means exe
 MZ | windows
 PLS | linux
