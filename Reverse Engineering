@@ -21,7 +21,6 @@
   ./func <<<$(echo "12345678")  # simulates user input
   
   gdb ./func
-    - cmds for gdp
     - shell, exit
     - quit
     - run    # runs function
