@@ -35,7 +35,7 @@
     # copy paste value in EIP back into wiremask
     # change offset and make an eip variable 
     
-    - shell -> env - gdp ./func   
+    - shell -> env - gdb ./func   
     - unset env LINES
     - unset env COLUMNS
     - show env
