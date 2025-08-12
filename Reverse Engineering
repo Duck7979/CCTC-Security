@@ -12,6 +12,7 @@ strings.exe -a -n 5 -nobanner .\demo1_new.exe | select -first 10
 strings.exe -a -nobanner .\demo1_new.exe | select -first 10
 
 ## BEhavioral Analysis
+chmod u+x   (If needed)
 run program as its make inteded
 
 ## Dynamic Analysis
