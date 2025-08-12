@@ -47,6 +47,10 @@
     # 0xf7de1000 (first of [heap]) and 0xffffe000 (last of [stack])
     - find /b [first addr heap], [last addr stack], 0xff, 0xe4
     
+        0xf7de3b59
+        0xf7f588ab
+        0xf7f645fb
+        0xf7f6460f
 
 ## Disassembly
   Open Ghidra > File > New Project > non-shared > complete
