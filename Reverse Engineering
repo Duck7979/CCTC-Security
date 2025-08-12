@@ -23,7 +23,8 @@ Run Progam how we want to (fuzzing, breaking, etc.)
 
 gdb ./func
   - cmds for gdp
-    - shell, exit, quit
+    - shell, exit
+    - quit
     - info function
 
 ## Disassembly
