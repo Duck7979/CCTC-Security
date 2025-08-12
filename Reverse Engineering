@@ -1,21 +1,20 @@
-## Static Analysis
+## Static Analysis ##
     - strings /path/filename
   This progam cannot be run in DOS mode | means exe
   MZ | windows
   PLS | linux
-  
-  
-  
-  
+    
   strings.exe -a -nobanner .\demo1_new.exe | findstr /i succ
   strings.exe -a -n 5 -nobanner .\demo1_new.exe | select -first 10
   strings.exe -a -nobanner .\demo1_new.exe | select -first 10
 
-## BEhavioral Analysis
+
+## BEhavioral Analysis ## 
   chmod u+x   (If needed)
   run program as its make inteded
 
-## Dynamic Analysis
+
+## Dynamic Analysis ##
   Run Progam how we want to (fuzzing, breaking, etc.)
   
   ./func $(echo "12345678")   # cmd substitution as parameter  (./func is the name of the executible)
@@ -46,19 +45,22 @@
     # first address after [heap] and last address [stack]
     # 0xf7de1000 (first of [heap]) and 0xffffe000 (last of [stack])
     - find /b [first addr heap], [last addr stack], 0xff, 0xe4
-    
-        0xf7de3b59
-        0xf7f588ab
-        0xf7f645fb
-        0xf7f6460f
+    # Convert to little indian
+    ###
+        0xf7|de|3b|59 -> "\x59\x3b\xde\xf7"
+        0xf7|f5|88|ab -> "\xab\x88\xf5\xf7"
+        0xf7|f6|45|fb -> "\xfb\x45\xf6\xf7"
+        0xf7|f6|46|0f -> "\x0f\x46\xf6\xf7"
+    ###
 
-## Disassembly
+
+## Disassembly ##
   Open Ghidra > File > New Project > non-shared > complete
   File > Import File > Navigate/Select .exe 
   Search > ...for strings > succ
 
 
-## Patching 
+## Patching ##
   Work from end, going backwards
   Look for Success or other message
   Click on condition of statement you need for success to run
