@@ -1,0 +1,14 @@
+## SSH to Demo network  
+  - ssh demo1@10.50.12.202 -L 1111:10.208.50.61:80
+    demo1
+    password
+
+
+## Firefox
+    - 127.0.0.1:1111/classinfo.html
+
+## Username
+    - TYSW-020-M
+      
+      10.50.16.22
+      YBLNCLyUBj3a
