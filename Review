@@ -1,0 +1,102 @@
+## Reconnaissance
+nmap to indetify services or open ports
+banner grab ports, netcat ports, nmap scripts and navigate to locations
+robots.txt
+Interact with web pages as designed, read verbatum what the web page is saying.
+
+
+## Web Exploitation 
+Understand the context of the webpage EX: file to read = cat [inputted text]
+    system to ping: ; whoami  #(Implies its going to ping a place so use ; and command)
+Command Injection ^
+    Identify the user executing the web page input field
+    ; cat /etc/passwd #Gain situational awareness about the user and others
+    ; cat /etc/hosts  # Gain situational awarenesss about other hosts
+    # then you can possible upload you own ssh key to the user for login contents of is_rsa.pub to user .ssh/authorized_keys
+
+
+## SQL
+###Authentication Bypass
+Authentication bypass with a login page if a login page exsits.
+    ' OR 1='1  # Both fields. POST Method.
+Send exploit again with Dev console open to Network tab, click on POST, Headers, Raw, copy/paste request payload into URL
+
+### Injection
+# POST Method
+1. Identify vulenerable field
+(selection/field) ' OR 1='1 #
+
+2. Identify number of columns
+UNION SELECT 1,2,3 #
+# Take note of order in which displayed
+
+3. Modify Golden Statement based on 2
+UNION SELECT table_schema,table_name,column_name from information_schema.columns
+# Order in which we want the information and the number of columns the table has
+
+4. Craft queries
+
+## Get Method
+do same thing as the POST method just without the '' or special characters.
+Queries will be done from URL bar.
+
+
+## Post Exploitation
+Host enumeration 
+  - sudo -l # Indentify permissions for the user we  logged in as
+Enumerate the users home directory and /tmp /var/tmp directories
+Enumerate cron if on linux
+Enumerate processes, services, scheduled tasks
+Enumerate /etc/hosts, /etc/passwd,
+
+
+## Linux Exploit Development
+Statoc Analysis
+  - stings, file
+Identify if the script takes information as user input or as a parameter 
+./file <<<$(echo "a bunch of stuff here") # Redirectiong user input into script
+./file $(echo 'a bunch more stuff') # Passing string as a parameter
+Interact with the program, run it and figure out the functionality of the program
+Utilize GDB to find the number of characters required to break the program
+On target system, follow steps to unset environment variables, then run the program. Crash the program to run info proc map.
+run find command to get list of 'jmp esp' addresses
+Convert to little endian and add to our script
+Add nop sled to our script
+Generate and past payload
+# UPDATE PRINT STATEMENT WITH ALL CARIABLES CREADTED
+
+
+## OS Privilege Escalation
+### Windows
+Enumerating scheduled task, services, registry  # These run as SYSTEM
+Ensure user has write permissions to that directory
+Try to change the name of the file being called
+Place payload with the appropriate name in the correct directory
+
+### Linux
+Enumerate SUID/SGID utilizing the find /perm command
+If SUID/SGID found, untilize SUID/SGID section of GTFOBins
+If sudo -l finds something of interest, untilize Sudo section of GTFOBins
+#### DO NOT RUN THE INSTALLATION COMMAND ####
+#### DO NOT RUN THE COMMAND FROM PWD (./BINARY XXXX) 
+
+
+## Binary anlysis/Reverse Engineering
+# Static Analysis
+strings, file,
+
+# Dynamic Analysis 
+Run the program and interact with it as intended
+
+# Behavioral Analysis
+Open in Ghidra and search for strings
+Start with end of program and reverse engineer the logic to figure out what is required for a success message.
+
+
+###############################
+PE = Portable executable # Windows
+ELF = Executable and Linable File # Linux
+
+# Bitshift
+X >> 4 = 2
+X when shifted 4 right equals 2 so bit would equal 32
