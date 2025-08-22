@@ -94,3 +94,50 @@ I then connected to the linux mahcine using the passwords and usernames found on
 then found a vulnerable binary that allowed me to gain root access
 then i did host enumeration and found other valuable information
 
+
+
+PART 2
+
+NMAP SCANNED
+
+Win1
+Nmap scan report for 192.168.28.5
+Host is up (0.00083s latency).
+Not shown: 995 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+3389/tcp open  ms-wbt-server
+
+Nix2
+Nmap scan report for 192.168.28.10
+Host is up (0.00085s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nix1
+Nmap scan report for 192.168.28.19
+Host is up (0.00099s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Created tunnels to loging to windows via RDP using Rsanch user
+
+then used serves to find user created service 
+
+found possible persistance within registry
+
+then uploaded moveup.exe and renamed it to 7zip.exe and restarted the machine to create hack user
+
+reopened rdp and logged in as hack and found files within directories
+
+then i logged into linux box 1 and did some Post Exploitation to find flags
+
+used ps to find processes and used find to find a txt named Password.txt
+
+then 
+
